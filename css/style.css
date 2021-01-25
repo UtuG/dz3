@@ -1,0 +1,114 @@
+*,
+*::before,
+*::after {
+	margin: 0;
+	padding: 0;
+	border: 0;
+}
+li {
+	list-style: none;
+}
+a,
+a:visited {
+	text-decoration: none;
+}
+a:hover {
+	text-decoration: none;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-weight: inherit;
+	font-size: inherit;
+}
+img {
+	vertical-align: top;
+}
+
+p {
+	color: #000000;
+}
+p {
+	color: rgb(0, 8, 119);
+} /*этот применился вместо прошлого*/
+
+p.text {
+	color: rgb(194, 224, 19);
+} /*приорететнее прошлого, потому-что это все  "p" с КЛАССОМ*/
+
+#one {
+	color: deeppink;
+} /*первый параграф окрасился, id > tag*/
+
+span {
+	color: aqua;
+}
+
+mark {
+	color: dodgerblue;
+	background-color: fuchsia;
+}
+
+/**/
+.header {
+	color: rgb(243, 0, 0);
+}
+
+.top {
+	color: rgb(220, 217, 20);
+}
+/* применился последний*/
+
+#start {
+	color: darkgoldenrod;
+	/* id > class*/
+}
+footer {
+	color: aqua;
+}
+
+.footer {
+	color: blue;
+	/* class > tag */
+}
+
+footer h6 {
+	color: darkgreen;
+	/* больша тэгов */
+}
+
+footer .lowInfo {
+	color: chartreuse;
+	/*тэги + классы > много тэгов */
+}
+
+.footer .lowInfo {
+	color: crimson;
+	/* больше классов - приоритет №1 */
+}
+
+/* * {
+	color: #000000;
+} обращение ко всем объектам */
+
+/* main, 
+.lowInfo{
+обращение к не связанным элементам
+color: rebeccapurple;	
+} */
+.test > p {
+	color: aqua;
+	/* первой вложенности "p" */
+}
+p + * {
+	color: rgb(255, 0, 0);
+	/* следующий на том-же уровне*/
+}
+
+/* #one ~ p {
+	color: rgb(183, 183, 183);
+	все параграфы после первого на том же уровне!
+} */
